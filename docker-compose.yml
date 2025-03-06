@@ -1,6 +1,5 @@
 services:
   apphelloworldconsole:
-    image: ${DOCKER_REGISTRY-}apphelloworldconsole
     build:
       context: .
       dockerfile: AppHelloWorldConsole/Dockerfile

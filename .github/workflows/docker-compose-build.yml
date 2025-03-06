@@ -1,4 +1,4 @@
-name: Build and Publish Docker Image to GHCR
+name: Build and Publish
 
 on:
   push:
@@ -16,16 +16,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 🛎️ Checkout репозитория
+      - name: Проверка репозитория
         uses: actions/checkout@v4
 
-      - name: 🐳 Установка Docker Compose
+      - name: Установка Docker Compose
         run: |
           sudo apt-get update
           sudo apt-get install -y docker-compose
 
-      - name: 🔍 Проверка docker-compose.yml
+      - name: Проверка docker-compose.yml
         run: docker-compose config
 
-      - name: 🏗️ Сборка Docker-образов
+      - name: Сборка Docker-образов
         run: docker-compose build
