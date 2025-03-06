@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AppHelloWorldConsole": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
